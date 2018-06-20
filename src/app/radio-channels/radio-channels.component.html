@@ -1,0 +1,31 @@
+<h1>Radio Channels</h1>
+<div class="button-row">
+  <button mat-raised-button color="primary" style='margin-right:16px' (click)="Play(90.8)" value="90.8">90.8</button>
+  <button mat-raised-button color="primary" style='margin-right:16px' (click)="Play1(91.2)" value="91.2">91.2</button>
+  <button mat-raised-button color="primary" style='margin-right:16px' (click)="Play2(92.4)" value="92.4">92.4</button>
+</div>
+<br>
+<br>
+<div>
+  <span>
+    <h2>{{messages}}</h2>
+  </span>
+</div>
+<br>
+
+<div *ngIf="RadioplayerShow">
+  <audio controls autoplay>
+    <source src="{{frequencyUrl}}">
+  </audio>
+</div>
+<div *ngIf="RadioplayerShow1">
+  <audio controls autoplay>
+    <source src="{{frequencyUrl1}}">
+  </audio>
+
+</div>
+<div *ngIf="RadioplayerShow2">
+  <audio controls autoplay>
+    <source src="{{frequencyUrl2}}">
+  </audio>
+</div>
